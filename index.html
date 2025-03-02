@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tushar's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desk">
+      <div class="logo">Tushar Bhardwaj</div>
+      <div>
+        <ul class="navl">
+          <li><a href="#about">About</a></li>
+          <li><a href="#Experience">Experience</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="ham">
+      <div class="logo">Tushar Bhardwaj</div>
+      <div class="hammenu">
+        <div class="hamicon" onclick="toogle_menu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menulinks">
+          <li><a href="#about" onclick="toogle_menu()">About</a></li>
+          <li><a href="#Experience" onclick="toogle_menu()">Experience</a></li>
+          <li><a href="#Projects" onclick="toogle_menu()">Projects</a></li>
+          <li><a href="#Contact" onclick="toogle_menu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="sec-pic-container">
+        <img src="/Assets/profile.png" alt="Bbhardwaj's Profile picture" />
+      </div>
+      <div class="sec-text">
+        <p class="sec-text-p1">Hello I'm</p>
+        <h1 class="title">Tushar Bhardwaj</h1>
+        <p class="sec-text-p2">Software Engineering Student</p>
+        <div class="btn-container">
+          <button
+            class="btn btn2"
+            onclick="window.open('./Assets/Tushars_resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn1" onclick="location.href='#Contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="social-container">
+          <img
+            src="./Assets/linkedin.png"
+            alt="Tushar's Linkedin Profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/tushar-bhardwaj-729660322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'"
+          />
+          <img
+            src="./Assets/github.png"
+            alt="Tushar's Github Profile"
+            class="icon"
+            onclick="location.href='https://github.com/tusharrbhardwaj'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="sec-text-p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="sec-pic-container">
+          <img
+            src="./Assets/profile2.png"
+            alt="Tushar's Profile Picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./Assets/experience.png"
+                alt="experience Icon"
+                class="icon"
+              />
+              <h3>Achievement</h3>
+              <p>
+                20+ <br />
+                Certificates of Merit
+              </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./Assets/education.png"
+                alt="Education Icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>BEng Software Engineering<br />(pursuing)</p>
+            </div>
+          </div>
+          <div class="text-container">
+            As an engineering student driven by a passion for technology and
+            innovation, I specialize in leveraging my programming and web
+            development skills to tackle real-world challenges. My proficiency
+            in Python, C, and C++, coupled with expertise in HTML, CSS, and
+            JavaScript, empowers me to create impactful and efficient solutions.
+            In addition to my technical accomplishments, I have excelled in
+            public speaking and competition, securing first place in a
+            district-level debate and a bronze medal in international martial
+            arts. <br />
+          </div>
+        </div>
+      </div>
+      <img
+        src="./Assets/arrow.png"
+        alt="Arrow icon"
+        class="arrow icon"
+        onclick="location.href='./#Experience'"
+      />
+    </section>
+    <section id="Experience">
+      <p class="sec-text-p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experince-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-subtitle">Development & Programming</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./Assets/checkmark.png"
+                  alt="Checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./Assets/checkmark.png"
+                  alt="Checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./Assets/checkmark.png"
+                  alt="Checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./Assets/checkmark.png"
+                  alt="Checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./Assets/checkmark.png"
+                  alt="Checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C++</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-subtitle">Successful Projects in</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./Assets/checkmark.png"
+                  alt="Checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Internet of Things (IoT)</h3>
+                  <p>Advanced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./Assets/checkmark.png"
+                  alt="Checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Web Development</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./Assets/checkmark.png"
+                  alt="Checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Raspberry pi</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./Assets/checkmark.png"
+                  alt="Checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./Assets/arrow.png"
+        alt="Arrow icon"
+        class="arrow icon"
+        onclick="location.href='./#project'"
+      />
+    </section>
+    <section id="project">
+      <p class="sec-text-p1">Browse my Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./Assets/project-1.png"
+                alt="Project 01"
+                class="project-img"
+              />
+              <h2 class="experience-subtitle project-title">
+                Women-and-kid Safety shoes
+              </h2>
+              <button
+                class="btn btn2 project-btn"
+                onclick="location.href='https://github.com"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn2 project-btn"
+                onclick="location.href='https://github.com"
+              >
+                Live demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./Assets/project-2.png"
+                alt="Project 02"
+                class="project-img"
+              />
+              <h2 class="experience-subtitle project-title">Project 02</h2>
+              <button
+                class="btn btn2 project-btn"
+                onclick="location.href='https://github.com"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn2 project-btn"
+                onclick="location.href='https://github.com"
+              >
+                Live demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./Assets/project-3.png"
+                alt="Project 03"
+                class="project-img"
+              />
+              <h2 class="experience-subtitle project-title">Project 03</h2>
+              <button
+                class="btn btn2 project-btn"
+                onclick="location.href='https://github.com"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn2 project-btn"
+                onclick="location.href='https://github.com"
+              >
+                Live demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./Assets/arrow.png"
+        alt="Arrow icon"
+        class="arrow icon"
+        onclick="location.href='./#Contact'"
+      />
+    </section>
+    <section id="Contact">
+        <p class="sec-text-p1">
+            Get In Touch
+        </p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper">
+            <div class="contact-info">
+                <img src="./Assets/email.png" alt="email icon" class="icon contact-icon">
+                <p><a href="mailto:tusharrbhardwaj@gmail.com">tusharrbhardwaj@gmail.com </a></p>
+            </div>
+        </div>
+        <div class="contact-info-upper">
+            <div class="contact-info">
+                <img src="./Assets/linkedin.png" alt="linkedin icon" class="icon contact-icon linnkdn">
+                <p><a href="https://www. linkedin.com/">LinkedIn </a></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <div class="navl-conatiner ">
+                <ul class="navl">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Experience">Experience</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                  </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2025 Tushar Bhardwaj. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
