@@ -6,7 +6,6 @@
 *{
     margin: 0;
     padding: 0;
-
 }
 
 body{
@@ -351,10 +350,12 @@ article{
 article.icon{
      cursor: default;
 }
-
+.ppfile img{
+    border-radius: 100%;
+}
 /* Projects */
 
-#project{
+#projects{
     position: relative;
 }
 
