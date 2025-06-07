@@ -1,0 +1,145 @@
+*{
+    background-color: black;
+}
+
+.project-heading{
+    margin: 50px;
+    text-align: center;
+    color: #00FF41;
+    font-size: 2rem;
+    margin-bottom: 100px;
+}
+
+.projects{
+    align-items: center;
+    justify-content: center;
+    display: block;
+}
+
+
+.project-button{
+    display: flex;
+    margin: 40px;
+    padding: 30px;
+    border-radius: 50px;
+    border-color: white;
+    color: #F8F8F2;
+    height: 350px;
+    width: 1375px;
+}
+
+button:hover{
+    box-shadow:
+    0 0 40px grey;
+}
+
+.about-project{
+    display: flex;
+}
+
+
+.left-pic{
+    display: flex;
+    height: 200px;
+    border-radius: 20%;
+    justify-content: left;
+    margin: 30px;
+}
+
+.right-pic{
+    display: flex;
+    height: 200px;
+    border-radius: 20%;
+    justify-content: right;
+    margin: 30px;
+}
+
+.project-name{
+    display: block;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+    margin-bottom: 20px;
+    color: #00FF41;
+}
+
+.project-description{
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 50px;
+}
+
+.link-buttons{
+    margin: 40px;
+    color: #F8F8F2;
+    background-color: grey;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 21px;
+    font-size: 1rem;
+    box-shadow:
+    0 0 10px white;
+}
+
+.link-buttons:hover{
+    cursor: pointer;
+    box-shadow:
+    0 0 20px #00FF41;
+}
+
+.link-buttons a{
+    color: #F8F8F2;
+    background-color: grey;
+
+}
+
+.link-buttons a:hover{
+    text-shadow: none;
+}
+
+.ptip{
+    border-radius: 20px;
+}
+
+.nav-project{
+    padding: 22px;
+    border-color: #F8F8F2;
+    font-size: 1rem;   
+    margin-top: 20px;
+    border-radius: 50px;
+    color: #F8F8F2;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    margin-bottom: 0px;
+    box-shadow:
+    0 0 10px #F8F8F2;
+}
+
+.nav-project a{
+    padding: none;
+    color: #F8F8F2;
+}
+
+.nav-project a:hover{
+    text-shadow: none;
+}
+
+.contact-img{
+    background-color: white;
+    height: 5vh;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+    0 0 30px white;
+    margin-left: 100px;
+    margin-bottom: 50px;
+
+}
+
+.contact-link-img{
+    display: flex;
+    margin-left: 500px;
+}
