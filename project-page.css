@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=VT323&display=swap');
+
+* {
+    background-color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: #F8F8F2;
+    font-size: 2.2em;
+    padding: 0.5vh;
+
+}
+
+.project-heading {
+    display: flex;
+    color: #F8F8F2;
+    text-align: center;
+    padding: 2vh;
+    flex-direction: column;
+    margin-bottom: 10vh;
+    font-size: 1.5em;
+}
+
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    padding: 7vh;
+    padding-top: 2vh;
+}
+
+.projects button {
+    display: flex;
+    margin-bottom: 8vh;
+    border-color: white;
+    padding: 5vh;
+    border-radius: 50px;
+}
+
+.projects button:hover {
+    box-shadow:
+        0 0 4vh #F8F8F2;
+}
+
+.about-project {
+    display: flex;
+    align-items: center;
+}
+
+.left-pic {
+    height: 30vh;
+    border-radius: 5px;
+}
+
+.right-pic {
+    height: 25vh;
+    border-radius: 5px;
+}
+
+.project-name {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4em;
+    color: #00FF41;
+    margin-bottom: 1vh;
+}
+
+.project-description {
+    color: #F8F8F2;
+    padding: 3vh;
+    font-size: 1.5em;
+}
+
+.link-head {
+    display: flex;
+    justify-content: center;
+    gap: 6vh;
+    margin: 0;
+    align-items: center;
+}
+
+.link-buttons {
+    border: 2px solid #F8F8F2;
+    border-radius: 50px;
+    padding: 2.5vh;
+    color: #F8F8F2;
+    /* width: 13vh;
+    height: 4vh; */
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    text-align: center;
+    margin: 0.5vh 0;
+}
+
+.link-buttons:hover {
+    cursor: pointer;
+    box-shadow:
+        0 0 4vh #00FF41;
+}
+
+.link-buttons a {
+    text-decoration: none;
+    color: #F8F8F2;
+}
+
+.footer {
+    display: flex;
+}
+
+.head-bottom a {
+    text-decoration: none;
+}
+
+.mob {
+    display: none;
+}
+
+.head-bottom {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 35vh;
+    border-bottom: 2px solid grey;
+    padding: 1.2vh;
+    font-size: 1.5em;
+}
+
+.head-bottom a {
+    /* border: 2px solid grey; */
+    padding: 1vh;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #00FF41;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 3vh;
+}
+
+/* here starts the mobile resoponsiveness */
+
+@media (max-width:600px) {
+    body {
+        font-family: "VT323", monospace;
+        font-weight: 400;
+        font-style: normal;
+        color: #F8F8F2;
+        font-size: 2em;
+        padding: 1.5vh;
+    }
+
+    .project-heading {
+        display: flex;
+        color: #F8F8F2;
+        text-align: center;
+        padding: 2vh;
+        flex-direction: column;
+        font-size: 0.8em;
+        margin-top: 5vh;
+        margin-bottom: 3vh;
+
+    }
+
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+        padding: 1vh;
+    }
+
+    .projects button {
+        flex-wrap: wrap;
+        border-radius: 50px;
+        padding: 2vh;
+    }
+
+    .projects button:hover {
+        box-shadow: none;
+    }
+
+    .about-project {
+        display: block;
+    }
+
+    .left-pic {
+        height: 180px;
+        margin-bottom: 2vh;
+        border: 2px solid #00FF41;
+        border-radius: 50px;
+        justify-content: center;
+
+    }
+
+    .right-pic {
+        height: 58vw;
+        margin-bottom: 2vh;
+        border: 2px solid #00FF41;
+        border-radius: 50px;
+
+    }
+
+    .small-img {
+        height: 60vw;
+    }
+
+    .large-img {
+        height: 48.5vw;
+    }
+
+    .project-name {
+        font-family: "VT323", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3em;
+        color: #00FF41;
+        margin-bottom: 1vh;
+    }
+
+    .project-description {
+        color: #F8F8F2;
+        padding: 1.5vh;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .link-head {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        align-items: center;
+    }
+
+    .link-buttons {
+        font-family: "VT323", monospace;
+        font-weight: 400;
+        font-style: normal;
+        border: 2px solid #F8F8F2;
+        border-radius: 50px;
+        padding: 3vh;
+        color: #F8F8F2;
+        /* width: 13vh;
+        height: 4vh; */
+        font-size: 2em;
+        text-align: center;
+        margin: 2vh 0;
+        box-shadow:
+            0 0 2vh #00FF41;
+
+    }
+
+    .link-buttons a {
+        text-decoration: none;
+        color: #F8F8F2;
+    }
+
+    .comp {
+        display: none;
+    }
+
+    .mob {
+        display: flex;
+    }
+
+    .head-bottom {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        gap: 0;
+        border-bottom: 2px solid grey;
+        font-size: 1em;
+        padding: 1.2vh;
+    }
+
+    .head-bottom a {
+        /* border: 2px solid grey; */
+        padding: 1vh;
+        border-radius: 50px;
+        text-decoration: none;
+        color: #00FF41;
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 1rem;
+        padding-top: 3vh;
+    }
+}

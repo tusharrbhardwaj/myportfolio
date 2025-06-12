@@ -1,117 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tushar's Portfolio</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <nav id="header">
-        <div id="nav" class="navbar">
-            <div class="logo">
-                Tushar Bhardwaj
-            </div>
-            <ul class="head">
-                <li><a href="#about">About</a></li>
-                <li><a href="./projects.html">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    
-    <section id="profile">
-        <div id="write" class="section-txt">
-            <div class="section-txt-container">
-                <span class="normal">(On your screen is)</span>
-                <h1 class="intro">Just a <span class="green-word">dev</span> curious enough</h1>
-                <h1 class="intro">to turn <span class="green-word">ideas</span> into <span class="green-word">code</span></h1>
-            <button class="upper-btn">
-            <p><a href="./assets/Tuhsars-resume.pdf" target="_blank">Download CV</a></p>
-            </button>
-            <button class="upper-btn">
-                <p><a href="https://github.com/tusharrbhardwaj" target="_blank">-  GitHub -</a></p>
-            </button>
-        </div>
-    
-        <div class="section-pic-container">
-            <img src="./assets/profile.png" alt="Tushar's prfile picture" class="shadow-of-picture">
-            <span class="photo-title">Tushar Bhardwaj</span>
-        </div>
-    </div>
-</section>
-<section id="about">
-    <h1 class="green-word">About Me</h1>
-    <div class="about-content">
-        
-        <div class="about-txt-container">
-            <span class="intro">
-                I am a student of Gisma University of Applied Sciences pursuing <span class="green-word">BEng Software Engineering</span>. <br> 
-                I have keen interest in technology and their whereabouts. <br><br>
-                I am moderately proficient in <span class="green-word">Python, C++, HTML & CSS</span> along with good knowledge of <span class="green-word">IoT</span> projects based on arduino
-                with some real life working prototypes and projects that I made over the years since my junior high school. <br><br>
-                I am currently setting my hands on <span class="green-word">LaTeX</span> writing my own research paper based on assignment provided by the university. <br><br>
-                With a strong proficieny in <span class="green-word">English</span> with IELTS band score of 7.5, <span class="green-word">Hindi</span>  as native speaker and I know <span class="green-word">German</span> at a beginner stage,
-                I'm more than ready to explore opportunities with different cultures. <br>
-
-                I work consistently to sharpen my knowledge and grow towards the goal I want to achieve. I know <span class="green-word">Linux</span> and I push my boundries everyday to lean something new.
-                <br><br>
-                I am <span class="green-word">open for collaborative projects and internship</span> in my interest area and link to the projects I have made and their demo are provided in the project section of this portfolio. <br><br>
-                <div class="link-idology">
-                    <a href="#contact"><span>------------------|| Contact ||-----------------</span></a>
-                    <a href="#idology"><span>------------------|| More on Me ||----------------</span></a>
-                </div>
-            </span>
-        </div>
-    </div>
-</section>
-<section id="idology">
-    <div class="about-content">
-        <span class="normal-2">I do not know everything and thats what make me perfect to work with. <br>
-        I ask, learn from mistakes and fail, fail to disappoint myself as learning is what I call winning. </span>
-    </div>
-    <div class="arrow-img">
-        <a href="#contact" class="link-idology"><span>------------------------|| Click here to Contact ||------------------------</span></a>
-    </div>
-</section>
-<section id="contact" class="contact-heading">
-    <h1>Get in touch</h1>
-    <span class="contact-headline">
-        Let us connect and discuss. <br> Do check out my<a href="./projects.html" class="green-word">projects</a>and leave your valuable 
-        feedback on linkedin, github or personally via Email.
-    </span>
-
-    <button class="contact-container-big">
-       <p><a href="mailto:tusharrbhardwaj@gmail.com" target="_blank">tusharrbhardwaj@gmail.com </a></p>
-    </button>
-    <button class="contact-container-small">
-       <p><a href="https://www.linkedin.com/in/tusharrbhardwaj/" target="_blank">LinkedIn </a></p>
-    </button>
-    <button class="contact-container-small">
-       <p><a href="https://github.com/tusharrbhardwaj" target="_blank">`GitHub`</a></p>
-    </button>
-
-    <span class="contact-headline">
-        <h4>
-            Thankyou for visiting the portfolio!
-        </h4>
-         
-    </span>
-</section>
-
-<footer>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <nav>
-        <div class="navbar">
-            <ul class="head bottom">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="./projects.html">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-        </div>
+      <div id="header" class="navbar">
+        <div class="logo">Tushar Bhardwaj</div>
+        <ul class="head">
+          <li><a href="#about">About</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <ul class="sidebar">
+          <li><a href="#about" onclick="hidesidebar();">About</a></li>
+          <li>
+            <a href="./projects.html" onclick="hidesidebar();">Projects</a>
+          </li>
+          <li><a href="#contact" onclick="hidesidebar();">Contact</a></li>
+        </ul>
+        <i class="mobile-menu" onclick="showsidebar();"
+          ><img src="./assets/menu.png" alt="menu-icon"
+        /></i>
+        <i class="cross" onclick="hidesidebar()">
+          <img src="./assets/close.png" alt="" />
+        </i>
+      </div>
     </nav>
-    <p class="copyright">Copyright &#169; 2025 Tushar Bhardwaj. All Rights Reserved.</p>
- </footer>
 
-</body>
+    <script>
+      function showsidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+
+        const crossimg = document.querySelector(".cross");
+        crossimg.style.display = "flex";
+
+        const menumobile = document.querySelector(".mobile-menu");
+        menumobile.style.display = "none";
+      }
+      function hidesidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+
+        const crossimage = document.querySelector(".cross");
+        crossimage.style.display = "none";
+
+        const showmenu = document.querySelector(".mobile-menu");
+        showmenu.style.display = "flex";
+      }
+    </script>
+
+    <section id="profile">
+      <div id="write" class="section-txt">
+        <div class="mobile-profile">
+          <img
+            src="./assets/profile.png"
+            alt="Tushar's prfile picture"
+            class="shadow-of-picture"
+          />
+          <span class="photo-title-mob">Tushar Bhardwaj</span>
+        </div>
+
+        <div class="section-txt-container">
+          <span class="normal">(On your screen is)</span>
+          <h1 class="intro-up">
+            Just a <span class="green-word">dev</span> curious enough
+          </h1>
+          <h1 class="intro-up">
+            to turn <span class="green-word">ideas</span> into
+            <span class="green-word">code</span>
+          </h1>
+
+          <div class="buttons-for-links">
+            <button class="upper-btn">
+              <a href="./assets/Tuhsars-resume.pdf" target="_blank"
+                >Download CV</a
+              >
+            </button>
+            <button class="upper-btn">
+              <a href="https://github.com/tusharrbhardwaj" target="_blank"
+                >&emsp; GitHub &emsp;</a
+              >
+            </button>
+          </div>
+        </div>
+
+        <div class="section-pic-container">
+          <img
+            src="./assets/profile.png"
+            alt="Tushar's prfile picture"
+            class="shadow-of-picture"
+          />
+          <span class="photo-title">Tushar Bhardwaj</span>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <h1 class="green-word">About Me</h1>
+      <div class="about-content">
+        <div class="about-txt-container">
+          <span class="intro">
+            I am a student of Gisma University of Applied Sciences pursuing
+            <span class="green-word">BEng Software Engineering</span>. <br />
+            I have keen interest in technology and their whereabouts.
+            <br /><br />
+            I am moderately proficient in
+            <span class="green-word">Python, C++, HTML & CSS</span> along with
+            good knowledge of <span class="green-word">IoT</span> projects based
+            on arduino with some real life working prototypes and projects that
+            I made over the years since my junior high school. <br /><br />
+            I am currently setting my hands on
+            <span class="green-word">LaTeX</span> writing my own research paper
+            based on assignment provided by the university. <br /><br />
+            With a strong proficieny in
+            <span class="green-word">English</span> with IELTS band score of
+            7.5, <span class="green-word">Hindi</span> as native speaker and I
+            know <span class="green-word">German</span> at a beginner stage, I'm
+            more than ready to explore opportunities with different cultures.
+            <br />
+
+            I work consistently to sharpen my knowledge and grow towards the
+            goal I want to achieve. I know
+            <span class="green-word">Linux</span> and I push my boundries
+            everyday to lean something new. <br /><br />
+            I am
+            <span class="green-word"
+              >open for collaborative projects and internship</span
+            >
+            in my interest area and link to the projects I have made and their
+            demo are provided in the project section of this portfolio.
+            <br /><br />
+            <div class="link-idology">
+              <a href="#contact"><span>&ensp;Contact&ensp;</span></a>
+              <a href="#idology"><span>&nbsp;More on Me&nbsp;</span></a>
+            </div>
+          </span>
+        </div>
+      </div>
+    </section>
+    <section id="idology">
+      <div class="about-content">
+        <span class="normal-2"
+          >I do not know everything and thats what make me perfect to work with.
+          <br />
+          I ask, learn from mistakes and fail, fail to disappoint myself as
+          learning is what I call winning.
+        </span>
+      </div>
+      <div class="link-idology contact-btn">
+        <a href="#contact"><span>Click here to Contact </span></a>
+      </div>
+    </section>
+    <section id="contact" class="contact-heading">
+      <h1>Get in touch</h1>
+      <span class="contact-headline">
+        Let us connect and discuss. <br />
+        Do check out my<a href="./projects.html" class="green-word">
+          projects </a
+        >and leave your valuable feedback on linkedin, github or personally via
+        Email. <br />
+      </span>
+
+      <div class="contact-things">
+        <div class="upper-class">
+          <button class="contact-container-big">
+            <a href="mailto:tusharrbhardwaj@gmail.com" target="_blank"
+              >tusharrbhardwaj@gmail.com
+            </a>
+          </button>
+        </div>
+
+        <div class="lower-class">
+          <button class="contact-container-small">
+            <a
+              href="https://www.linkedin.com/in/tusharrbhardwaj/"
+              target="_blank"
+              >&ensp;LinkedIn&ensp;
+            </a>
+          </button>
+          <button class="contact-container-small">
+            <a href="https://github.com/tusharrbhardwaj" target="_blank"
+              >&ensp;GitHub&ensp;</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <span class="contact-headline">
+        <h4>Thankyou for visiting the portfolio!</h4>
+      </span>
+    </section>
+
+    <footer>
+      <nav>
+        <div class="navbar bottom">
+          <ul class="head">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-bottom">
+          <ul class="head-bottom">
+            <li><a href="./index.html#header">Home</a></li>
+            <li><a href="./index.html#about">About</a></li>
+            <li><a href="./projects.html">Project</a></li>
+          </ul>
+        </div>
+        <p class="copyright">
+          Copyright &#169; 2025 Tushar Bhardwaj. All Rights Reserved.
+        </p>
+      </nav>
+    </footer>
+  </body>
 </html>
