@@ -312,7 +312,7 @@ button:hover {
     padding-top: 3vh;
 }
 
-@media (max-width:600px) {
+@media (max-width:1050px) {
     html {
         scroll-behavior: smooth;
     }

@@ -154,7 +154,7 @@ body {
 
 /* here starts the mobile resoponsiveness */
 
-@media (max-width:600px) {
+@media (max-width:1050px) {
     body {
         font-family: "VT323", monospace;
         font-weight: 400;
