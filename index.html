@@ -1,237 +1,934 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-SLWQ5EGBE6"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-SLWQ5EGBE6");
-    </script>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tushar's Portfolio</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="icon" type="icon/" href="./favicon.ico" />
-  </head>
-  <body>
-    <nav>
-      <div id="header" class="navbar">
-        <div class="logo">Tushar Bhardwaj</div>
-        <ul class="head">
-          <li><a href="#about">About</a></li>
-          <li><a href="./projects.html">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <ul class="sidebar">
-          <li><a href="#about" onclick="hidesidebar();">About</a></li>
-          <li>
-            <a href="./projects.html" onclick="hidesidebar();">Projects</a>
-          </li>
-          <li><a href="#contact" onclick="hidesidebar();">Contact</a></li>
-        </ul>
-        <i class="mobile-menu" onclick="showsidebar();"
-          ><img src="./assets/menu.png" alt="menu-icon"
-        /></i>
-        <i class="cross" onclick="hidesidebar()">
-          <img src="./assets/close.png" alt="" />
-        </i>
-      </div>
-    </nav>
+
+    <title>Tushar Bhardwaj — Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- favicon -->
+    <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/brand/favicon-32x32.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/brand/favicon-16x16.png"
+    />
+
+    <link rel="apple-touch-icon" href="assets/brand/favicon-256x256.png" />
 
     <script>
-      function showsidebar() {
-        const sidebar = document.querySelector(".sidebar");
-        sidebar.style.display = "flex";
-
-        const crossimg = document.querySelector(".cross");
-        crossimg.style.display = "flex";
-
-        const menumobile = document.querySelector(".mobile-menu");
-        menumobile.style.display = "none";
-      }
-      function hidesidebar() {
-        const sidebar = document.querySelector(".sidebar");
-        sidebar.style.display = "none";
-
-        const crossimage = document.querySelector(".cross");
-        crossimage.style.display = "none";
-
-        const showmenu = document.querySelector(".mobile-menu");
-        showmenu.style.display = "flex";
+      if (localStorage.getItem("portfolio-theme") === "dark") {
+        document.documentElement.classList.add("dark");
       }
     </script>
 
-    <section id="profile">
-      <div id="write" class="section-txt">
-        <div class="mobile-profile">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="site-nav">
+      <div class="nav-row">
+        <a href="#home" class="wordmark brand-mark" data-link="home">
           <img
-            src="./assets/profile.png"
-            alt="Tushar's prfile picture"
-            class="shadow-of-picture"
+            src="assets/brand/logo-light.png"
+            class="brand-logo brand-logo-light"
+            alt="Tushar Bhardwaj"
           />
-          <span class="photo-title-mob">Tushar Bhardwaj</span>
-        </div>
 
-        <div class="section-txt-container">
-          <span class="normal">(On your screen is)</span>
-          <h1 class="intro-up">
-            Just a <span class="green-word">dev</span> curious enough
-          </h1>
-          <h1 class="intro-up">
-            to turn <span class="green-word">ideas</span> into
-            <span class="green-word">code</span>
-          </h1>
-
-          <div class="buttons-for-links">
-            <button class="upper-btn">
-              <a href="./assets/Tushar_CV.pdf" target="_blank"
-                >Download CV</a
-              >
-            </button>
-            <button class="upper-btn">
-              <a href="https://github.com/tusharrbhardwaj" target="_blank"
-                >&emsp; GitHub &emsp;</a
-              >
-            </button>
-          </div>
-        </div>
-
-        <div class="section-pic-container">
           <img
-            src="./assets/profile.png"
-            alt="Tushar's prfile picture"
-            class="shadow-of-picture"
+            src="assets/brand/logo-dark.png"
+            class="brand-logo brand-logo-dark"
+            alt=""
+            aria-hidden="true"
           />
-          <span class="photo-title">Tushar Bhardwaj</span>
-        </div>
+
+          <span class="brand-name"> tushar.bhardwaj </span>
+        </a>
+
+        <button
+          class="menu-btn mono"
+          id="menuBtn"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          menu
+        </button>
+
+        <nav class="links mono" id="navLinks">
+          <a href="#home" data-link="home">home</a>
+          <a href="#work" data-link="work">work</a>
+          <a href="#contact" data-link="contact">contact</a>
+        </nav>
       </div>
-    </section>
-    <section id="about">
-      <h1 class="green-word">About Me</h1>
-      <div class="about-content">
-        <div class="about-txt-container">
-          <span class="intro">
-            I am a student of Gisma University of Applied Sciences pursuing
-            <span class="green-word">BEng Software Engineering</span>. <br />
-            I have keen interest in technology and their whereabouts.
-            <br /><br />
-            I am moderately proficient in
-            <span class="green-word">Python, C++, HTML & CSS</span> along with
-            good knowledge of <span class="green-word">IoT</span> projects based
-            on arduino with some real life working prototypes and projects that
-            I made over the years since my junior high school. <br /><br />
-            I am currently setting my hands on
-            <span class="green-word">LaTeX</span> writing my own research paper
-            based on assignment provided by the university. <br /><br />
-            With a strong proficieny in
-            <span class="green-word">English</span> with IELTS band score of
-            7.5, <span class="green-word">Hindi</span> as native speaker and I
-            know <span class="green-word">German</span> at a beginner stage, I'm
-            more than ready to explore opportunities with different cultures.
-            <br />
+    </header>
 
-            I work consistently to sharpen my knowledge and grow towards the
-            goal I want to achieve. I know
-            <span class="green-word">Linux</span> and I push my boundries
-            everyday to lean something new. <br /><br />
-            I am
-            <span class="green-word"
-              >open for collaborative projects and internship</span
-            >
-            in my interest area and link to the projects I have made and their
-            demo are provided in the project section of this portfolio.
-            <br /><br />
-            <div class="link-idology">
-              <a href="#contact"><span>&ensp;Contact&ensp;</span></a>
-              <a href="#idology"><span>&nbsp;More on Me&nbsp;</span></a>
+    <main>
+      <div class="page" id="page-home">
+        <section class="hero">
+          <div class="wrap hero-layout">
+            <div class="hero-content">
+              <p class="hero-tag mono"></p>
+
+              <h1 class="hero-head">
+                Just a dev,
+                <span>curious enough to turn ideas into code.</span>
+              </h1>
+
+              <p class="hero-sub">
+                Software Engineering student building automation tools, web
+                applications, databases, and IoT systems. Currently exploring
+                cybersecurity and looking for interesting projects,
+                collaborations, and internships.
+              </p>
+
+              <div class="hero-actions">
+                <a href="#work" class="hero-cta mono" data-link="work">
+                  view my work
+                </a>
+
+                <a
+                  href="#contact"
+                  class="hero-secondary mono"
+                  data-link="contact"
+                >
+                  contact me
+                </a>
+              </div>
             </div>
-          </span>
-        </div>
-      </div>
-    </section>
-    <section id="idology">
-      <div class="about-content">
-        <span class="normal-2"
-          >I do not know everything and thats what make me perfect to work with.
-          <br />
-          I ask, learn from mistakes and fail, fail to disappoint myself as
-          learning is what I call winning.
-        </span>
-      </div>
-      <div class="link-idology contact-btn">
-        <a href="#contact"><span>Click here to Contact </span></a>
-      </div>
-    </section>
-    <section id="contact" class="contact-heading">
-      <h1>Get in touch</h1>
-      <span class="contact-headline">
-        Let us connect and discuss. <br />
-        Do check out my<a href="./projects.html" class="green-word">
-          projects </a
-        >and leave your valuable feedback on linkedin, github or personally via
-        Email. <br />
-      </span>
 
-      <div class="contact-things">
-        <div class="upper-class">
-          <button class="contact-container-big">
-            <a href="mailto:tusharrbhardwaj@gmail.com" target="_blank"
-              >tusharrbhardwaj@gmail.com
+            <div class="hero-visual">
+              <div class="photo-frame">
+                <img
+                  src="assets/photo.jpeg"
+                  alt="Tushar Bhardwaj"
+                  class="hero-photo"
+                />
+              </div>
+
+              <p class="photo-caption mono">Bhardwaj, Tushar</p>
+
+              <div class="hero-meta mono">
+                <div>
+                  <span class="meta-label">based in</span>
+                  <strong>Germany</strong>
+                </div>
+
+                <div>
+                  <span class="meta-label">focus</span>
+                  <strong>software · automation · security</strong>
+                </div>
+
+                <div>
+                  <span class="meta-label">status</span>
+                  <strong>open to opportunities</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section class="wrap block">
+          <div class="section-head">
+            <h2>Selected projects</h2>
+
+            <p>A few recent builds — full list on the work page.</p>
+          </div>
+
+          <div class="proj-list">
+            <!-- PROJECT 01 -->
+
+            <div class="proj-row">
+              <span class="proj-index mono">01</span>
+
+              <div class="proj-main">
+                <h3>Scheduler Schule</h3>
+
+                <p>
+                  An academic timetable management system supporting 2,000+
+                  students and 50+ professors, with an automated scheduling
+                  engine that resolves classroom and professor conflicts.
+                </p>
+
+                <div class="proj-links mono">
+                  <a
+                    href="https://github.com/tusharrbhardwaj/Scheduler-schule"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    github
+                  </a>
+                </div>
+              </div>
+
+              <span class="proj-side mono">
+                python / postgresql<br />
+                2026
+              </span>
+            </div>
+
+            <!-- PROJECT 02 -->
+
+            <div class="proj-row">
+              <span class="proj-index mono">02</span>
+
+              <div class="proj-main">
+                <h3>Automated Attendance Management System</h3>
+
+                <p>
+                  QR-code based attendance for hybrid classrooms, cutting
+                  processing time from 10–15 minutes down to under 5 for a class
+                  of 30.
+                </p>
+
+                <div class="proj-links mono">
+                  <a
+                    href="https://github.com/tusharrbhardwaj/Automated_Attendance"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    github
+                  </a>
+                </div>
+              </div>
+
+              <span class="proj-side mono">
+                python / selenium<br />
+                2025
+              </span>
+            </div>
+
+            <!-- PROJECT 03 -->
+
+            <div class="proj-row">
+              <span class="proj-index mono">03</span>
+
+              <div class="proj-main">
+                <h3>Donkey Chat</h3>
+
+                <p>
+                  A multi-room chat app built for a Computer Networks course —
+                  real-time messaging over TCP sockets, with SQLite and
+                  SQLAlchemy handling users, rooms, and history.
+                </p>
+
+                <div class="proj-links mono">
+                  <a
+                    href="https://github.com/Feniuk/Donkey-Chat"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    github
+                  </a>
+                </div>
+              </div>
+
+              <span class="proj-side mono">
+                python / sockets<br />
+                2025
+              </span>
+            </div>
+          </div>
+
+          <div class="see-more">
+            <a href="#work" class="see-link mono" data-link="work">
+              see all projects
             </a>
-          </button>
-        </div>
+          </div>
+        </section>
 
-        <div class="lower-class">
-          <button class="contact-container-small">
+        <hr class="divider" />
+
+        <!-- ABOUT -->
+
+        <section class="wrap block">
+          <div class="section-head">
+            <div>
+              <h2>About</h2>
+
+              <p>A little more about me.</p>
+            </div>
+
+            <a href="assets/Tushar-Bhardwaj-CV.pdf" class="cv mono" download>
+              Download CV
+            </a>
+          </div>
+
+          <div class="about-grid">
+            <div>
+              <p>
+                I have a keen interest in technology and its whereabouts, and
+                I'm moderately proficient in Python, C++, and HTML &amp; CSS,
+                alongside good knowledge of IoT projects built on Arduino.
+              </p>
+
+              <p>
+                I've been building working prototypes since junior high school,
+                including a safety-sensor cap that earned a ₹10,000 grant from
+                the Government of India.
+              </p>
+            </div>
+
+            <div>
+              <p>
+                With IELTS 7.5 in English, Hindi as my native language, and
+                German B1 level, I'm comfortable working across cultures.
+              </p>
+
+              <p>
+                I use Linux, Git, LaTeX and other tools regularly and keep
+                pushing myself to learn something new.
+              </p>
+
+              <div class="skill-tags mono">
+                <span>Python</span>
+                <span>C++</span>
+                <span>PostgreSQL</span>
+                <span>Selenium</span>
+                <span>Arduino / IoT</span>
+                <span>Linux</span>
+                <span>Git</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- work -->
+
+      <div class="page" id="page-work">
+        <section class="wrap work-header">
+          <div class="work-intro">
+            <p class="page-label mono"></p>
+
+            <h1>Things I've built.</h1>
+
+            <p>
+              Software tools, hardware projects, experiments and university
+              coursework — listed most recent first.
+            </p>
+          </div>
+        </section>
+
+        <section class="wrap work-showcase">
+          <!-- donkey chat -->
+
+          <article class="work-item">
+            <div class="work-copy">
+              <div class="work-number mono">01</div>
+
+              <h2>Donkey Chat</h2>
+
+              <p>
+                A multi-room chat application built as a university Computer
+                Networks project. Supports registration, bcrypt-hashed
+                authentication, real-time messaging over TCP sockets, and
+                persistent chat history through a normalized SQLite schema
+                managed with SQLAlchemy.
+              </p>
+
+              <div class="work-footer">
+                <div class="work-links mono">
+                  <a
+                    href="https://github.com/Feniuk/Donkey-Chat"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Github
+                  </a>
+                </div>
+
+                <div class="work-meta mono">
+                  python / sockets / sqlite<br />
+                  may 2026
+                </div>
+              </div>
+            </div>
+
             <a
+              class="work-media"
+              href="https://github.com/Feniuk/Donkey-Chat"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open Donkey Chat project"
+            >
+              <img
+                src="assets/projects/donkey-chat.jpeg"
+                alt="Donkey Chat application"
+                loading="lazy"
+                onerror="
+                  this.parentElement.classList.add('image-missing');
+                  this.remove();
+                "
+              />
+
+              <span class="work-media-fallback mono">
+                Donkey Chat<br />
+                project preview
+              </span>
+            </a>
+          </article>
+
+          <!-- schedular-schule -->
+
+          <article class="work-item">
+            <div class="work-copy">
+              <div class="work-number mono">02</div>
+
+              <h2>Scheduler Schule</h2>
+
+              <p>
+                Designed and built a timetable system for Gisma University
+                supporting 2,000+ students, 50+ professors, and dozens of
+                classrooms. An automated scheduling engine generates
+                conflict-free timetables using greedy, graph-based, and dynamic
+                programming algorithms, backed by structured data models for
+                scheduling and resource allocation.
+              </p>
+
+              <div class="work-footer">
+                <div class="work-links mono">
+                  <a
+                    href="https://github.com/tusharrbhardwaj/Scheduler-schule"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Github
+                  </a>
+                </div>
+
+                <div class="work-meta mono">
+                  python / postgresql<br />
+                  feb – mar 2026
+                </div>
+              </div>
+            </div>
+
+            <a
+              class="work-media"
+              href="https://github.com/tusharrbhardwaj/Scheduler-schule"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open Scheduler Schule project"
+            >
+              <img
+                src="assets/projects/schule.jpeg"
+                alt="Scheduler Schule academic timetable management system"
+                loading="lazy"
+                onerror="
+                  this.parentElement.classList.add('image-missing');
+                  this.remove();
+                "
+              />
+
+              <span class="work-media-fallback mono">
+                Scheduler Schule<br />
+                project preview
+              </span>
+            </a>
+          </article>
+
+          <!-- automated attendance -->
+
+          <article class="work-item">
+            <div class="work-copy">
+              <div class="work-number mono">03</div>
+
+              <h2>Automated Attendance Management System</h2>
+
+              <p>
+                A QR-code based attendance solution for Gisma University that
+                cut processing time from 10–15 minutes to under 5 for classes of
+                about 30, using Selenium browser automation to eliminate manual
+                admin work and support hybrid online/offline classrooms.
+              </p>
+
+              <div class="work-footer">
+                <div class="work-links mono">
+                  <a
+                    href="https://github.com/tusharrbhardwaj/Automated_Attendance"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Github
+                  </a>
+                </div>
+
+                <div class="work-meta mono">
+                  python / selenium / qr<br />
+                  nov – dec 2025
+                </div>
+              </div>
+            </div>
+
+            <a
+              class="work-media"
+              href="https://github.com/tusharrbhardwaj/Automated_Attendance"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open Automated Attendance project"
+            >
+              <img
+                src="assets/projects/automated.jpeg"
+                alt="Automated Attendance Management System"
+                loading="lazy"
+                onerror="
+                  this.parentElement.classList.add('image-missing');
+                  this.remove();
+                "
+              />
+
+              <span class="work-media-fallback mono">
+                Automated Attendance<br />
+                project preview
+              </span>
+            </a>
+          </article>
+
+          <!-- portfolio -->
+
+          <article class="work-item">
+            <div class="work-copy">
+              <div class="work-number mono">04</div>
+
+              <h2>Portfolio Website</h2>
+
+              <p>
+                My original portfolio, built from scratch with HTML5, raw CSS3,
+                and a small amount of JavaScript, hosted on Netlify and fully
+                responsive across screen sizes.
+              </p>
+
+              <div class="work-footer">
+                <div class="work-links mono">
+                  <a
+                    href="https://github.com/tusharrbhardwaj/myportfolio"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Github
+                  </a>
+
+                  <a href="#home"> Demo </a>
+                </div>
+
+                <div class="work-meta mono">
+                  html / css / js<br />
+                  jun 2025
+                </div>
+              </div>
+            </div>
+
+            <a
+              class="work-media"
+              href="#home"
+              aria-label="View portfolio website"
+            >
+              <img
+                src="assets/projects/portfolio.png"
+                alt="Portfolio website"
+                loading="lazy"
+                onerror="
+                  this.parentElement.classList.add('image-missing');
+                  this.remove();
+                "
+              />
+
+              <span class="work-media-fallback mono">
+                Portfolio<br />
+                website preview
+              </span>
+            </a>
+          </article>
+
+          <!-- home server -->
+
+          <article class="work-item">
+            <div class="work-copy">
+              <div class="work-number mono">05</div>
+
+              <h2>Home Server (Linux)</h2>
+
+              <p>
+                I made my own home server which features web hosting, a personal
+                WireGuard VPN to ssh over it from wherever I want. It hosts a
+                personal AI chat bot using Ollama phi3, which again I can acces
+                via sshing into my device. I'm now progressing over to make it a
+                NAS (Network Attached Storage) to make it my personal little
+                cute cloud storage.
+                <br /><br />
+                It uses i3 9th Gen (an old laptop's motherboard), a 500GB SSD
+                and 4GB of RAM in total.
+                <br />
+                (This website is hosted on this vary server using cloudflare
+                tunnels.)
+              </p>
+
+              <div class="work-footer">
+                <div class="work-links mono">
+                  <a
+                    href="https://lnkd.in/p/dV5TQgTK"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Linkedin
+                  </a>
+                </div>
+
+                <div class="work-meta mono">
+                  linux / hardware<br />
+                  may 2025
+                </div>
+              </div>
+            </div>
+
+            <a
+              class="work-media work-media-photo"
+              href="https://lnkd.in/p/dV5TQgTK"
+              target="_blank"
+              rel="noopener"
+              aria-label="View Linux server project"
+            >
+              <img
+                src="assets/projects/home-server.jpeg"
+                alt="DIY Linux home server built from an old laptop"
+                loading="lazy"
+                onerror="
+                  this.parentElement.classList.add('image-missing');
+                  this.remove();
+                "
+              />
+
+              <span class="work-media-fallback mono">
+                DIY Linux Server<br />
+                hardware photo
+              </span>
+            </a>
+          </article>
+
+          <!-- plagiarism-checker -->
+
+          <article class="work-item">
+            <div class="work-copy">
+              <div class="work-number mono">06</div>
+
+              <h2>Automated Plagiarism Checker &amp; Report Generator</h2>
+
+              <p>
+                A command-line Python tool that automates plagiarism detection
+                through browser automation : chunking documents, submitting them
+                to duplichecker.com around its 1,000-word limit, and merging
+                results into a single polished PDF report.
+              </p>
+
+              <div class="work-footer">
+                <div class="work-links mono">
+                  <a
+                    href="https://github.com/tusharrbhardwaj/Automated-Plagiarism-Checker"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Github
+                  </a>
+                </div>
+
+                <div class="work-meta mono">
+                  python / selenium<br />
+                  apr 2025
+                </div>
+              </div>
+            </div>
+
+            <a
+              class="work-media"
+              href="https://github.com/tusharrbhardwaj/Automated-Plagiarism-Checker"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open Automated Plagiarism Checker project"
+            >
+              <img
+                src="assets/projects/plagiarism-checker.jpg"
+                alt="Automated Plagiarism Checker and Report Generator"
+                loading="lazy"
+                onerror="
+                  this.parentElement.classList.add('image-missing');
+                  this.remove();
+                "
+              />
+
+              <span class="work-media-fallback mono">
+                Plagiarism Checker<br />
+                project preview
+              </span>
+            </a>
+          </article>
+
+          <!-- periodic-table -->
+
+          <article class="work-item">
+            <div class="work-copy">
+              <div class="work-number mono">07</div>
+
+              <h2>Periodic Table in Python</h2>
+
+              <p>
+                A Tkinter utility for browsing chemical elements by name or
+                atomic number, showing atomic mass, phase, an element image, and
+                a Wikipedia link for further reading — built for students and
+                amateur chemists.
+              </p>
+
+              <div class="work-footer">
+                <div class="work-links mono">
+                  <a
+                    href="https://github.com/tusharrbhardwaj/Periodic-Table-in-python"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Github
+                  </a>
+                </div>
+
+                <div class="work-meta mono">
+                  python / tkinter<br />
+                  feb 2024
+                </div>
+              </div>
+            </div>
+
+            <a
+              class="work-media"
+              href="https://github.com/tusharrbhardwaj/Periodic-Table-in-python"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open Periodic Table project"
+            >
+              <img
+                src="assets/projects/periodic.png"
+                alt="Periodic Table application written in Python"
+                loading="lazy"
+                onerror="
+                  this.parentElement.classList.add('image-missing');
+                  this.remove();
+                "
+              />
+
+              <span class="work-media-fallback mono">
+                Periodic Table<br />
+                application preview
+              </span>
+            </a>
+          </article>
+
+          <!-- shoes -->
+
+          <article class="work-item">
+            <div class="work-copy">
+              <div class="work-number mono">08</div>
+
+              <h2>Women &amp; Children Safety Shoes</h2>
+
+              <p>
+                An IoT smart shoe built on Arduino Nano with a touch sensor and
+                SIM800L module — in an emergency it sends an SMS with live
+                location and calls family and police with the mic on, while
+                deploying built-in self-defense tools. Presented at the National
+                Science Fair in New Delhi.
+              </p>
+
+              <div class="work-footer">
+                <div class="work-links mono">
+                  <a
+                    href="https://www.linkedin.com/in/tusharrbhardwaj/details/projects/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Linkedin
+                  </a>
+                </div>
+
+                <div class="work-meta mono">
+                  arduino / iot<br />
+                  jan – mar 2023
+                </div>
+              </div>
+            </div>
+
+            <a
+              class="work-media work-media-photo"
+              href="https://www.linkedin.com/in/tusharrbhardwaj/details/projects/"
+              target="_blank"
+              rel="noopener"
+              aria-label="View Women and Children Safety Shoes project"
+            >
+              <img
+                src="assets/projects/shoes.jpeg"
+                alt="Women and Children Safety Shoes prototype"
+                loading="lazy"
+                onerror="
+                  this.parentElement.classList.add('image-missing');
+                  this.remove();
+                "
+              />
+
+              <span class="work-media-fallback mono">
+                Safety Shoes<br />
+                prototype photo
+              </span>
+            </a>
+          </article>
+
+          <!-- cap -->
+
+          <article class="work-item">
+            <div class="work-copy">
+              <div class="work-number mono">09</div>
+
+              <h2>Social Distance Maintaining Cap</h2>
+
+              <p>
+                A cap using ultrasonic sensors to hold safe distancing during
+                COVID-19, alerting the wearer with vibrations if someone came
+                too close. Earned a ₹10,000 grant from the Government of India
+                and a selection for the District Level Exhibition &amp; Project
+                Competition.
+              </p>
+
+              <div class="work-footer">
+                <div class="work-links mono">
+                  <a
+                    href="https://www.linkedin.com/in/tusharrbhardwaj/details/projects/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Linkedin
+                  </a>
+                </div>
+
+                <div class="work-meta mono">
+                  arduino / iot<br />
+                  sep – oct 2020
+                </div>
+              </div>
+            </div>
+
+            <a
+              class="work-media work-media-photo"
+              href="https://www.linkedin.com/in/tusharrbhardwaj/details/projects/"
+              target="_blank"
+              rel="noopener"
+              aria-label="View Social Distance Maintaining Cap project"
+            >
+              <img
+                src="assets/projects/cap.jpeg"
+                alt="Social Distance Maintaining Cap prototype"
+                loading="lazy"
+                onerror="
+                  this.parentElement.classList.add('image-missing');
+                  this.remove();
+                "
+              />
+
+              <span class="work-media-fallback mono">
+                Social Distance Cap<br />
+                prototype photo
+              </span>
+            </a>
+          </article>
+        </section>
+      </div>
+
+      <!-- contact page -->
+
+      <div class="page" id="page-contact">
+        <section class="wrap contact-section">
+          <p class="page-label mono"></p>
+
+          <div class="contact-hero">
+            <h1>
+              Let's build<br />
+              <span>something interesting.</span>
+            </h1>
+
+            <p>
+              Let's connect and discuss. Check out my work and leave your
+              feedback on LinkedIn, GitHub, or by email.
+            </p>
+
+            <a href="mailto:tusharrbhardwaj@gmail.com" class="email-link">
+              tusharrbhardwaj@gmail.com
+            </a>
+          </div>
+
+          <div class="social-list">
+            <a
+              class="social-row"
               href="https://www.linkedin.com/in/tusharrbhardwaj/"
               target="_blank"
-              >&ensp;LinkedIn&ensp;
-            </a>
-          </button>
-          <button class="contact-container-small">
-            <a href="https://github.com/tusharrbhardwaj" target="_blank"
-              >&ensp;GitHub&ensp;</a
+              rel="noopener"
             >
-          </button>
-        </div>
-      </div>
+              <span class="name">LinkedIn</span>
 
-      <span class="contact-headline">
-        <h4>Thankyou for visiting the portfolio!</h4>
-      </span>
-    </section>
+              <span class="handle mono"> /in/tusharrbhardwaj </span>
+            </a>
+
+            <a
+              class="social-row"
+              href="https://github.com/tusharrbhardwaj"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="name">GitHub</span>
+
+              <span class="handle mono"> @tusharrbhardwaj </span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- footer -->
 
     <footer>
-      <nav>
-        <div class="navbar bottom">
-          <ul class="head">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="./projects.html">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+      <div class="wrap footer-row mono">
+        <span> &copy; 2024 Tushar Bhardwaj. </span>
+
+        <div class="footer-links">
+          <a href="#home" data-link="home">home</a>
+          <a href="#work" data-link="work">work</a>
+          <a href="#contact" data-link="contact">contact</a>
         </div>
-        <div class="navbar-bottom">
-          <ul class="head-bottom">
-            <li><a href="./index.html#header">Home</a></li>
-            <li><a href="./index.html#about">About</a></li>
-            <li><a href="./projects.html">Project</a></li>
-          </ul>
-        </div>
-        <p class="copyright">
-          Copyright &#169; 2025 Tushar Bhardwaj. All Rights Reserved.
-        </p>
-      </nav>
+      </div>
     </footer>
+
+    <button
+      id="themeToggle"
+      class="theme-toggle"
+      type="button"
+      aria-label="Switch to dark mode"
+      title="Toggle dark mode"
+    >
+      <span class="theme-icon" aria-hidden="true">☾</span>
+    </button>
+
+    <script src="script.js"></script>
   </body>
 </html>
